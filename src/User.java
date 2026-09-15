@@ -22,12 +22,6 @@ public class User {
     }
 
     public boolean isAdmin() {
-        return "ADMIN".equalsIgnoreCase(role);
-    }
-
-    @Override
-    public String toString() {
-        return "User{username='" + username + "', role='" + role + "'}";
+        return "ADMIN".equals(role);
     }
 }
-
