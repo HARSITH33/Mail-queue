@@ -1,7 +1,7 @@
 public class User {
     private String username;
     private String password;
-    private String role;
+    private String role; // "USER" or "ADMIN"
 
     public User(String username, String password, String role) {
         this.username = username;
@@ -22,6 +22,6 @@ public class User {
     }
 
     public boolean isAdmin() {
-        return "ADMIN".equals(role);
+        return "ADMIN".equals(this.role);
     }
 }

@@ -1,20 +1,16 @@
-import java.time.LocalDateTime;
-
 public class Mail {
     private String mailId;
     private String sender;
     private String recipient;
     private String subject;
-    private MailStatus status;
-    private LocalDateTime createdAt;
+    private String status; // "PENDING", "SENT", "REMOVED"
 
     public Mail(String mailId, String sender, String recipient, String subject) {
         this.mailId = mailId;
         this.sender = sender;
         this.recipient = recipient;
         this.subject = subject;
-        this.status = MailStatus.PENDING;
-        this.createdAt = LocalDateTime.now();
+        this.status = "PENDING";
     }
 
     public String getMailId() {
@@ -33,15 +29,11 @@ public class Mail {
         return subject;
     }
 
-    public MailStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(MailStatus status) {
+    public void setStatus(String status) {
         this.status = status;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
     }
 }
