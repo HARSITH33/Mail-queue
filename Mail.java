@@ -3,7 +3,7 @@ public class Mail {
     private String sender;
     private String recipient;
     private String subject;
-    private String status; // "PENDING", "SENT", "REMOVED"
+    private String status;
 
     public Mail(String mailId, String sender, String recipient, String subject) {
         this.mailId = mailId;
